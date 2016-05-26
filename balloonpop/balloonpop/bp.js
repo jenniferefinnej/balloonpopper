@@ -2,9 +2,9 @@
   var arr, body, tab, tr, td, tn, row, col;
 
   arr = [
-    [0, "a",2],
-    [1,2,3],
-    [2,"blah",4]
+    [0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]
   ];
 
 
@@ -23,65 +23,29 @@
     }
     tab.appendChild(tr);
     }
-   var $div = $('<div />').appendTo('body');
-  $div.attr('id', 'holdy');
  
 
-    //body.appendChild(tab);
+    body.appendChild(tab);
 
-
-// This is in JQuery, a snazzy library that condenses some of the JQuery syntax. Because it's JQuery, it needs to be required. Click on the button next to 'JS' on the top of this JavaScript panel. Inside of that settings panel,  go to the bottom, open the quick add dropdown and select Jquery. Save and come back and try this: 
+var counter = 0;
 
 $('td').click(function(){
     $(this).text('x');
+    counter += 1;
+    $('h2').text(counter);
 });
 
+var scoreboard = new 
+Scoreboard();
 
-// To Do:
-//   - On the click, also increase a numerical score that displays next to the box. 
-//    -Create a timer that only allows you to click on the boxes during while the time is running
-//           - The timer will need a button to know when to start, when clicked. 
-
-// - BONUS: Add a session that keeps track of your highest score
-
-
-
-
+// var score = 0; 
+// function drawScore() {
+  //ctx.font = "16 px Arial";
+  //ctx.fillStyle = "#0095DD";
+  //ctx.fillText("Score: "+score, 8,20);
+//}
 
 
-// var arr, body, tab, tr, td, tn, row, col; 
-
-// arr = [
-//   [0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0],
-//   [0, 0, 0, 0, 0]
-// ];
-
-// body = document.getElementsByTagName('body')[0];
-//   tab = document.createElement('table');
-
-
-//   for (row = 0; row < arr.length; row++){
-//     tr = document.createElement('tr');
-    
-//     for (col = 0; col < arr[row].length; col++){
-//       td = document.createElement('td');
-//       tn = document.createTextNode(arr[row][col]);
-//       td.appendChild(tn);
-//       tr.appendChild(td);
-//     }
-//     tab.appendChild(tr);
-//   }
-//   body.appendChild(tab);
-
-
-
-
-// $('td').click(function(){
-//     $(this).text('x');
-// });
 
 
 // function startTimer(duration, display) {
